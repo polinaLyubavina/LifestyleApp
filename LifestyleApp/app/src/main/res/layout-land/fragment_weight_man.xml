@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="false"
+    tools:context=".WeightFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/main_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg"
+            android:backgroundTint="#d6FFFFFF"
+            android:backgroundTintMode="src_over">
+
+        <TextView
+                android:id="@+id/title_weight_man_frag"
+                android:layout_width="265dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="23dp"
+                android:layout_marginEnd="48dp"
+                android:fontFamily="@font/roboto"
+                android:text="@string/weight_management_calc"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="@+id/weight_man_profile_pic_frag"
+                app:layout_constraintEnd_toStartOf="@+id/weight_man_profile_pic_frag"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/weight_man_profile_pic_frag"
+                app:layout_constraintVertical_bias="1.0" />
+
+        <ImageView
+                android:id="@+id/weight_man_profile_pic_frag"
+                android:layout_width="65dp"
+                android:layout_height="67dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="664dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/title_weight_man_frag"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/avatar" />
+
+
+        <Button
+                android:id="@+id/lifestyle_btn_weightman_frag"
+                android:layout_width="130dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="42dp"
+                android:background="@drawable/roundedbuttongrey"
+                android:text="@string/lifestyle_button"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+                app:layout_constraintVertical_bias="0.101" />
+
+        <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="337dp"
+                android:layout_height="476dp"
+                android:layout_marginTop="32dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/weight_man_profile_pic_frag">
+
+            <TextView
+                    android:id="@+id/headerInformationFrag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lines="2"
+                    android:maxLines="2"
+                    android:text="@string/please_fill_out_prof_bef_weight"
+                    android:textAlignment="center"
+                    android:textSize="18sp" />
+
+            <TextView
+                    android:id="@+id/tvCalculatorChangeTextFrag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text="@string/pounds_to_change_per_wk"
+                    android:textColor="#000000" />
+
+            <SeekBar
+                    android:id="@+id/calculatorPoundsPerWeekFrag"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:max="20"
+                    android:min="-20"
+                    android:progress="0"
+                    android:progressTint="#000000" />
+
+            <RadioGroup
+                    android:id="@+id/calculatorSedentaryOrActiveFrag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                <RadioButton
+                        android:id="@+id/calculatorActiveFrag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:text="@string/active"
+                        android:textSize="18sp" />
+
+                <RadioButton
+                        android:id="@+id/calculatorSedentaryFrag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/sedentary"
+                        android:textSize="18sp" />
+
+            </RadioGroup>
+
+            <TextView
+                    android:id="@+id/daily_cal_weight_man_frag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:ems="10"
+                    android:text="@string/daily_cal_goal_colon"
+                    android:textAlignment="center"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:textSize="18sp" />
+
+            <EditText
+                    android:id="@+id/dailyCalEditTextFrag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:inputType="textPersonName"
+                    android:textSize="24sp" />
+
+            <TextView
+                    android:id="@+id/basalMetRateTextViewFrag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:ems="10"
+                    android:text="@string/basal_met_rate_colon"
+                    android:textAlignment="center"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:textSize="18sp" />
+
+            <EditText
+                    android:id="@+id/basalMetRateEditTextFrag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:inputType="textPersonName"
+                    android:textSize="24sp" />
+
+            <TextView
+                    android:id="@+id/current_bmi_weightman_frag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:ems="10"
+                    android:text="@string/current_bmi_colon"
+                    android:textAlignment="center"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:textSize="18sp" />
+
+            <EditText
+                    android:id="@+id/bmiEditTextFrag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:inputType="textPersonName"
+                    android:textSize="24sp" />
+
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+
+
+
+
+
+
+
+
+
+
+
+
+

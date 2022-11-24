@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="false"
+    tools:context=".NavigationFragment">
+
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".NavigationFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg"
+            android:backgroundTint="#d6FFFFFF"
+            android:backgroundTintMode="src_over">
+
+        <TextView
+                android:id="@+id/title_nav_pane_frag"
+                android:layout_width="265dp"
+                android:layout_height="60dp"
+                android:fontFamily="@font/roboto"
+                android:text="@string/life_tools"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="@+id/photo_nav_pane_frag"
+                app:layout_constraintEnd_toStartOf="@+id/photo_nav_pane_frag"
+                app:layout_constraintHorizontal_bias="0.476"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/photo_nav_pane_frag"
+                app:layout_constraintVertical_bias="0.82" />
+
+        <ImageView
+                android:id="@+id/photo_nav_pane_frag"
+                android:layout_width="65dp"
+                android:layout_height="67dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.953"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.049"
+                app:srcCompat="@drawable/avatar"
+                android:contentDescription="@string/nav_pane_prof_photo" />
+
+        <LinearLayout
+                android:layout_width="278dp"
+                android:layout_height="545dp"
+                android:layout_marginBottom="60dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.496"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title_nav_pane_frag">
+
+            <Button
+                    android:id="@+id/my_prof_btn_frag"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/roundedbuttonpurp"
+                    android:text="@string/my_profile" />
+
+            <Button
+                    android:id="@+id/weight_man_btn_frag"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/roundedbuttonpurp"
+                    android:text="@string/weight_management" />
+
+            <Button
+                    android:id="@+id/hike_btn_frag"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/roundedbuttonpurp"
+                    android:text="@string/nearby_hikes" />
+
+            <Button
+                    android:id="@+id/weather_btn_frag"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/roundedbuttonpurp"
+                    android:text="@string/local_weather" />
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
+</ScrollView>

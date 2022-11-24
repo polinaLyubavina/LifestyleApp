@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="false"
+        tools:context=".ProfilePageFragment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg"
+            android:backgroundTint="#d6FFFFFF"
+            android:backgroundTintMode="src_over">
+
+        <TextView
+                android:id="@+id/title_my_prof_frag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:text="@string/my_profile"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toTopOf="@+id/prof_update_photo_frag"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.138"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.488" />
+
+        <Button
+                android:id="@+id/prof_update_photo_frag"
+                android:layout_width="144dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="32dp"
+                android:text="@string/update_photo"
+                app:layout_constraintBottom_toBottomOf="@+id/myprof_photo_frag"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/myprof_photo_frag"
+                app:layout_constraintVertical_bias="0.527" />
+
+        <ImageView
+                android:id="@+id/myprof_photo_frag"
+                android:layout_width="141dp"
+                android:layout_height="136dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/prof_update_photo_frag"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.124"
+                app:srcCompat="@drawable/avatar"
+                android:contentDescription="@string/prof_frag_prof_photo" />
+
+        <Button
+                android:id="@+id/lifeBtnMyProfFrag"
+                android:layout_width="130dp"
+                android:layout_height="45dp"
+                android:background="@drawable/roundedbuttongrey"
+                android:text="@string/lifestyle_button"
+                app:layout_constraintBottom_toBottomOf="@+id/saveProfileFrag"
+                app:layout_constraintEnd_toStartOf="@+id/saveProfileFrag"
+                app:layout_constraintHorizontal_bias="0.57"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/saveProfileFrag"
+                app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+                android:id="@+id/saveProfileFrag"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="64dp"
+                android:background="@drawable/roundedbuttonpurp"
+                android:text="@string/save_button"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+                app:layout_constraintVertical_bias="0.435" />
+
+        <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="329dp"
+                android:layout_height="416dp"
+                android:layout_marginTop="32dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/myprof_photo_frag"
+                app:layout_constraintVertical_bias="0.0">
+
+            <EditText
+                    android:id="@+id/profileNameFrag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:hint="@string/name_colon"
+                    android:importantForAutofill="no" />
+
+            <EditText
+                    android:id="@+id/profileAgeFrag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:hint="@string/age_colon"
+                    android:importantForAutofill="no" />
+
+            <EditText
+                    android:id="@+id/profileCityFrag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:ems="10"
+                    android:inputType="textShortMessage"
+                    android:hint="@string/city_colon"
+                    android:importantForAutofill="no" />
+
+            <EditText
+                    android:id="@+id/profileCountryFrag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:ems="10"
+                    android:inputType="textShortMessage"
+                    android:hint="@string/country_colon"
+                    android:importantForAutofill="no" />
+
+            <TextView
+                    android:id="@+id/textViewHeightFrag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/height_in_inches"
+                    android:textColor="#000000" />
+
+            <SeekBar
+                    android:id="@+id/seekBarHeightFrag"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:max="80"
+                    android:min="54"
+                    android:progress="67"
+                    android:progressTint="#000000" />
+
+            <TextView
+                    android:id="@+id/textViewWeightFrag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/weight_in_pounds"
+                    android:textColor="#000000" />
+
+            <SeekBar
+                    android:id="@+id/seekBarWeightFrag"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:max="300"
+                    android:min="80"
+                    android:progress="190"
+                    android:progressTint="#000000" />
+
+            <RadioGroup
+                    android:id="@+id/profileGenderFrag"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+
+                <RadioButton
+                        android:id="@+id/profileMaleFrag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/male"
+                        android:textSize="18sp" />
+
+                <RadioButton
+                        android:id="@+id/profileFemaleFrag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/female"
+                        android:textSize="18sp" />
+
+            </RadioGroup>
+
+            <SeekBar
+                    android:id="@+id/seekBarFrag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
